@@ -1,0 +1,17 @@
+<%= form_with(model: git, local: true) do |form| %>
+  <% if git.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(git.errors.count, "error") %> prohibited this git from being saved:</h2>
+
+      <ul>
+      <% git.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
