@@ -12,11 +12,6 @@ class GitsController < ApplicationController
   def show
   end
 
-  # GET /gits/new
-  def new
-    @git = Git.new
-  end
-
   # GET /gits/1/edit
   def edit
   end
